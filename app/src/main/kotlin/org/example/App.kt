@@ -4,8 +4,16 @@
 package org.example
 
 fun funcion (a: Int, b: Int, c: Int) {
-    println ("$ax²+$bx+$c")
+    println ("$a x²+ $b x+ $c")
 }
+fun mostrarvalores (a: Int, b: Int, c: Int) {
+    println("estos son los valores de y cdo x es (desde -5 a 5)")
+    for (i in -5..5){
+        val valorx =a*i*i+b*i+c
+         println(valorx)
+    }
+}
+
     
 
 fun main() {
@@ -16,4 +24,5 @@ fun main() {
         println ("a tiene que ser diferente a 0")
     }
     funcion(a,b,c)
+    mostrarvalores(a,b,c)
 }
