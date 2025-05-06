@@ -13,6 +13,21 @@ fun mostrarvalores (a: Int, b: Int, c: Int) {
          println(valorx)
     }
 }
+fun raicesdiscriminante (a: Int, b: Int, c: In) {
+    val dis = b * b - 4 * a * c
+    if(dis ==0){ 
+            val raiz = -b / (2 * a)
+            println("La ecuación tiene una raíz real doble:")
+            println("x = $raiz")
+        }
+    if (dis > 0){
+            val raiz1 = (-b +$dis/$dis) / (2 * a)
+            val raiz2 = (-b -$dis/$dis) / (2 * a)
+            println("La ecuación tiene dos raíces reales:")
+            println("x₁ = $raiz1")
+            println("x₂ = $raiz2")
+        }
+    }
 
     
 
