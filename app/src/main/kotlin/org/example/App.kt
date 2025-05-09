@@ -7,6 +7,8 @@ package org.example
 fun funcion (a: Int, b: Int, c: Int) {
     println ("$a x²+ $b x+ $c")
 }
+
+
 fun mostrarvalores (a: Int, b: Int, c: Int) {
     println("estos son los valores de y cdo x es (desde -5 a 5)")
     for (i in -5..5){
@@ -14,6 +16,8 @@ fun mostrarvalores (a: Int, b: Int, c: Int) {
          println(valorx)
     }
 }
+
+
 fun raicesdiscriminante(a: Double, b: Double, c: Double) {
     val dis = b * b - 4 * a * c
     
@@ -38,6 +42,8 @@ fun raicesdiscriminante(a: Double, b: Double, c: Double) {
 }
 
     
+
+
 
 fun main() {
     val a = 2
