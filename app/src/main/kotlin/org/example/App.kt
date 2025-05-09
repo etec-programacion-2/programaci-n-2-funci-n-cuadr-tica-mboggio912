@@ -36,8 +36,8 @@ fun raicesdiscriminante(a: Double, b: Double, c: Double) {
         val parteReal = -b / (2 * a)
         val parteImaginaria = Math.sqrt(-dis) / (2 * a)
         println("La ecuación tiene dos raíces complejas:")
-        println("x₁ = $parteReal + ${parteImaginaria}i")
-        println("x₂ = $parteReal - ${parteImaginaria}i")
+        println("x₁ = %.2f + %.2fi".format(parteReal, parteImaginaria))
+        println("x₂ = %.2f - %.2fi".format(parteReal, parteImaginaria))
     }
 }
 
