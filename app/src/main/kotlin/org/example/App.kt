@@ -3,6 +3,7 @@
  */
 package org.example
 
+
 fun funcion (a: Int, b: Int, c: Int) {
     println ("$a x²+ $b x+ $c")
 }
@@ -13,21 +14,28 @@ fun mostrarvalores (a: Int, b: Int, c: Int) {
          println(valorx)
     }
 }
-fun raicesdiscriminante (a: Int, b: Int, c: In) {
+fun raicesdiscriminante(a: Double, b: Double, c: Double) {
     val dis = b * b - 4 * a * c
-    if(dis ==0){ 
-            val raiz = -b / (2 * a)
-            println("La ecuación tiene una raíz real doble:")
-            println("x = $raiz")
-        }
-    if (dis > 0){
-            val raiz1 = (-b +$dis/$dis) / (2 * a)
-            val raiz2 = (-b -$dis/$dis) / (2 * a)
-            println("La ecuación tiene dos raíces reales:")
-            println("x₁ = $raiz1")
-            println("x₂ = $raiz2")
-        }
+    
+    if (dis == 0.0) {
+        val raiz = -b / (2 * a)
+        println("La ecuación tiene una raíz real doble:")
+        println("x = $raiz")
+    } else if (dis > 0) {
+        val raiz1 = (-b + Math.sqrt(dis)) / (2 * a)
+        val raiz2 = (-b - Math.sqrt(dis)) / (2 * a)
+        println("La ecuación tiene dos raíces reales:")
+        println("x₁ = $raiz1")
+        println("x₂ = $raiz2")
+    } else {
+        // Caso para discriminante negativo
+        val parteReal = -b / (2 * a)
+        val parteImaginaria = Math.sqrt(-dis) / (2 * a)
+        println("La ecuación tiene dos raíces complejas:")
+        println("x₁ = $parteReal + ${parteImaginaria}i")
+        println("x₂ = $parteReal - ${parteImaginaria}i")
     }
+}
 
     
 
@@ -38,6 +46,10 @@ fun main() {
     if (a == 0) {
         println ("a tiene que ser diferente a 0")
     }
+    val ad: Double = 3.1
+    val bd: Double = 2.3
+    val cd: Double = 12.0
     funcion(a,b,c)
     mostrarvalores(a,b,c)
+    raicesdiscriminante(ad,bd,cd)
 }
